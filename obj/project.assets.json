@@ -8,19 +8,24 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\agaal\\.nuget\\packages\\": {}
+    "C:\\Users\\canlo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\3A\\Estructura_de_Datos\\1erParcial\\Practica2_PilasyColas\\Practica2_PilasyColas.csproj",
+      "projectUniqueName": "C:\\Users\\canlo\\OneDrive - Escuela Modelo SCP\\DTS\\universidad\\Semestre 2\\ProyectoQummi\\Practica2_PilasyColas\\Practica2_PilasyColas.csproj",
       "projectName": "Practica2_PilasyColas",
-      "projectPath": "D:\\3A\\Estructura_de_Datos\\1erParcial\\Practica2_PilasyColas\\Practica2_PilasyColas.csproj",
-      "packagesPath": "C:\\Users\\agaal\\.nuget\\packages\\",
-      "outputPath": "D:\\3A\\Estructura_de_Datos\\1erParcial\\Practica2_PilasyColas\\obj\\",
+      "projectPath": "C:\\Users\\canlo\\OneDrive - Escuela Modelo SCP\\DTS\\universidad\\Semestre 2\\ProyectoQummi\\Practica2_PilasyColas\\Practica2_PilasyColas.csproj",
+      "packagesPath": "C:\\Users\\canlo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\canlo\\OneDrive - Escuela Modelo SCP\\DTS\\universidad\\Semestre 2\\ProyectoQummi\\Practica2_PilasyColas\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\agaal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\canlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -44,8 +49,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
-      }
+        "auditMode": "all"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -66,7 +72,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
