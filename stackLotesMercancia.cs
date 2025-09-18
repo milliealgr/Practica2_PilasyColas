@@ -35,11 +35,19 @@ public class Stack<T>
         return item;
     }
 
-    public T Peek()// devuelve el elemento superior sin quitarlo
+    // NUEVO: Devuelve el elemento en la cima sin quitarlo
+    public T Peek()
     {
         if (isvacio)
-            throw new InvalidOperationException("beep esta vacío.");
+            throw new InvalidOperationException("La pila está vacía.");
         return items[top];
+    }
+
+    // NUEVO: Permite enumerar la pila desde la cima hacia la base
+    public IEnumerable<T> EnumeraFromTopo()
+    {
+        for (int i = top; i >= 0; i--)
+            yield return items[i];
     }
 
     private void Resize(int nuevoTam)//  esto cambia el tamaño del array interno cuano se llene pipi
@@ -62,6 +70,7 @@ public class Stack<T>
         for (int i = top; i >= 0; i--)
             Console.WriteLine(items[i]?.ToString()); // el ? es para evitar excepciones si el item es null  ocupo checar otra manera de hacerlo
     }
+<<<<<<< Updated upstream
 
     // Permite enumerar los elementos desde la cima hacia la base
     public IEnumerable<T> EnumeraFromTopo()
@@ -69,4 +78,6 @@ public class Stack<T>
         for (int i = top; i >= 0; i--)
             yield return items[i]; // el yield es una palabra reservada que permite devolver elementos uno a uno en una enumeración 
     }
+=======
+>>>>>>> Stashed changes
 }
