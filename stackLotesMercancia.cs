@@ -67,6 +67,6 @@ public class Stack<T>
     public IEnumerable<T> EnumeraFromTopo()
     {
         for (int i = top; i >= 0; i--)
-            yield return items[i]; // el yield es una palabra reservada que permite devolver elementos uno a uno en una enumeración 
+            yield return items[i]; //  yield es una palabra reservada que permite devolver elementos uno a uno en una enumeración 
     }
 }
