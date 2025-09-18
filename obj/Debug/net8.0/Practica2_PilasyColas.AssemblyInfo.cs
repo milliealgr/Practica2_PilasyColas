@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Practica2_PilasyColas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e6f6e7e30d3f5fe26d38db5fa5e01c1bde14abf3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+44f18318914068e9c8648f9178633a7e91471d54")]
 [assembly: System.Reflection.AssemblyProductAttribute("Practica2_PilasyColas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Practica2_PilasyColas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -2,12 +2,12 @@
 using System;
 using System.Collections.Generic;
 
-public class Stack<T>
+public class MyStack<T>
 {
     private T[] items;
     private int top; // índice del elemento superior (-1 cuando está vacío y 0 cuando tiene un elemento algoa asi )
 
-    public Stack(int capacidadInicial = 4)
+    public MyStack(int capacidadInicial = 4)
     {
         if (capacidadInicial <= 0) capacidadInicial = 4;
         items = new T[capacidadInicial];
