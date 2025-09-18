@@ -6,20 +6,20 @@ using Microsoft.VisualBasic;
 
 public class MyQueue<Type>
 {
-    private Type[] _values;
-    private Type[] Values
+    private Type[] _items;
+    private Type[] Items
     {
         get
         {
-            return _values;
+            return _items;
         }
         set
         {
             if (value is null)
             {
-                throw new Exception("La queue siempre tiene que tener una instancia de objetos o algo asi creo");
+                throw new Exception("La queue siempre tiene que tener una instancia de objetos");
             }
-            _values = value;
+            _items = value;
         }
 
     }
@@ -78,97 +78,43 @@ public class MyQueue<Type>
         }
     }
 
-    private static int _defaultCapacity = 5;
-    private static int DefaultCapacity
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    public MyQueue(int capacidad = 20)
     {
-        get
-        {
-            return _defaultCapacity;
-        }
-        set
-        {
-            if (value <= 0)
-            {
-                throw new Exception("La capacidad no puede ser menor o igual a cero");
-            }
-            _defaultCapacity = value;
-        }
+        Capacity = capacidad;
+        Items = new Type[capacidad];
     }
 
-    /// <summary>
-    /// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /// </summary>
-    public MyQueue() : this(DefaultCapacity)
-    {
-        //aqui funciona como el constructor de abajo pero se le pasa la capacidad default si es que no se la dan supongo..
-    }
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    public MyQueue(int maxCapacity)
-    {
-        Capacity = maxCapacity;
-        Values = new Type[maxCapacity];
-        Count = 0;
-    }
 
-    public MyQueue(Type[] valoresIniciales)
-    : this(valoresIniciales.Length)
+    public void Enqueue(Type item)
     {
-        // Capacidad = valoresIniciales.Length;
-        // Valores = new int[Capacidad];
-        // Cuenta = 0;
-
-        foreach (var value in valoresIniciales)
+        if (this.IsFull)
         {
-            Push(value);
+            throw new Exception("La cola está llena");
         }
+
+        Items[Count] = item;
+        Count++;
     }
 
-    /// <summary>
-    /// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /// </summary>
-
-    public void Push(Type value)
-    {
-        try
-        {
-            Values[Count] = value;
-            Count++;
-        }
-        catch (Exception nombreQueMeDeLaGanaDeMiExcepcion)
-        {
-            Console.WriteLine(nombreQueMeDeLaGanaDeMiExcepcion);
-        }
-    }
-
-    public Type Pop()
+    public Type Dequeue()
     {
         if (this.IsEmpty)
         {
-            throw new Exception("La queue esta vacia no se puede poppear");
+            throw new Exception("La cola esta vacia");
         }
 
-        Type temp = Values[0];
+        Type temp = Items[0];
         for (int i = 1; i < Count; i++)
         {
-            Values[i - 1] = Values[i];
+            Items[i - 1] = Items[i];
         }
 
         Count--;
         return temp;
     }
 
-    public Type Peek()
-    {
-        if (this.IsEmpty)
-        {
-            throw new Exception("La queue esta vacia no se puede poppear");
-        }
-        return Values[0];
-    }
-
-    public void ExaminarQueue()
-    {
-        Console.WriteLine($"Capacity: {Capacity}");
-        Console.WriteLine($"Count: {Count}");
-    }
 }
